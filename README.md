@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Jogo da Velha em React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma implementação do clássico **Jogo da Velha (Tic-Tac-Toe)**, desenvolvida utilizando **React**. O objetivo do jogo é permitir que dois jogadores se enfrentem, alternando turnos até que um deles forme uma linha, coluna ou diagonal com seus símbolos (X ou O), ou que o jogo termine empatado.
 
-## Available Scripts
+## Tecnologias Utilizadas
 
-In the project directory, you can run:
+- **React**: Biblioteca JavaScript utilizada para construir a interface do usuário e gerenciar o estado do jogo.
+- **CSS**: Estilização do tabuleiro e das interações visuais do jogo.
+- **JavaScript ES6+**: Utilizado para lógica de jogo, gerenciamento de turnos e verificação de vitórias.
 
-### `npm start`
+## Requisitos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Node.js** versão 14 ou superior
+- **npm** (gerenciador de pacotes do Node)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Certifique-se de que o Node.js versão 14.x está instalado. Caso precise instalar ou verificar a versão atual do Node.js, siga os passos abaixo:
 
-### `npm test`
+### Verificar versão do Node.js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Execute o comando no terminal para verificar a versão instalada:
 
-### `npm run build`
+    node -v
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Como Rodar o Projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/clhobus013/tde1-gco.git
+2. Navegue até o diretório do projeto:
+    ```bash
+    cd tde1-gco
+3. Instale as dependências:
+    ```bash
+    npm installk
+4. Inicie o servidor de desenvolvimento:
+    ```bash
+    npm start
+5. Acesse o jogo no seu navegador em: http://localhost:3000
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Processo de desenvolvimento
 
-### `npm run eject`
+O repositório segue um fluxo de desenvolvimento baseado em Git Flow com duas branches principais:
+- **main**: Contém o código de produção. Todas as versões finais e estáveis são mantidas aqui.
+- **develop**: Branch de desenvolvimento, onde as funcionalidades e correções são integradas antes de serem enviadas para produção.
+- As funcionalidades e correções são desenvolvidas em branches dedicadas e unidas à branch develop via Pull Requests.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Ciclo de Desenvolvimento**
+Cada nova funcionalidade, melhoria ou bug deve ser documentado como uma **Issue** no repositório.
+Em seguida, pode-se realizar o desenvolvimento da mesma.
+Para a organização do repositório, cada funcionalidade ou correção terá a sua branch correspondente nomeada como **feature/nome-da-funcionalidade** ou **bugfix/nome-do-bug**
+Após a conclusão do desenvolvimento da funcionalidade ou correção, cria-se um Pull Request da branch de funcionalidade para a branch develop.
+Na sequência o código passa por revisão e se aceito, a Pull Request é aprovada e o merge é feito para a branch develop.
+Por fim, após finalizada a nova versão, o código é submetido a uma nova pull request para a branch main e recebe o merge após passar por revisão
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Versões (Releases)**
+O ciclo de releases será semanal, feitas a partir da branch main, e cada versão será documentada no repositório.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Correção Emergencial (Hotfix)**
+Em caso de bugs críticos encontrados em produção, será criada uma branch hotfix/nome-do-hotfix a partir da branch main.
+A correção é implementada diretamente na branch hotfix e, após a revisão, será mesclada nas branches main e develop para garantir que a correção não seja perdida em futuras versões.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Diagramas e Fluxos**
+O fluxo de desenvolvimento segue o seguinte modelo:
+<img src="public/fluxo_processo_desenv.png" alt="Fluxo de desenvolvimento" width="400"/>
