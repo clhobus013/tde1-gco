@@ -17,7 +17,7 @@ export default function () {
 
     function handleClick(i) {
 
-        if (squares[i]) {
+        if (squares[i] || calculateWinner(squares)) {
             return;
         }
 
