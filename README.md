@@ -2,6 +2,12 @@
 
 Este projeto é uma implementação do clássico **Jogo da Velha (Tic-Tac-Toe)**, desenvolvida utilizando **React**. O objetivo do jogo é permitir que dois jogadores se enfrentem, alternando turnos até que um deles forme uma linha, coluna ou diagonal com seus símbolos (X ou O), ou que o jogo termine empatado.
 
+## Funcionalidades
+
+- **Jogabilidade para dois jogadores**: O jogo alterna automaticamente entre os jogadores "X" e "O" em cada jogada.
+- **Detecção de vitória**: O jogo identifica quando um jogador vence (linha, coluna ou diagonal completa).
+- **Reiniciar o jogo**: Ao final de cada partida, os jogadores podem reiniciar o jogo para começar uma nova partida.
+
 ## Tecnologias Utilizadas
 
 - **React**: Biblioteca JavaScript utilizada para construir a interface do usuário e gerenciar o estado do jogo.
@@ -36,6 +42,16 @@ Execute o comando no terminal para verificar a versão instalada:
     ```bash
     npm start
 5. Acesse o jogo no seu navegador em: http://localhost:3000
+
+## Captura de Tela
+<img src="public/capturas_tela/inicio.png" alt="inicio jogo da velha" width="400px"/>
+<img src="public/capturas_tela/jogo-desenv.png" alt="jogo da velha em desenvolvimento" width="400"/>
+<img src="public/capturas_tela/ganhador.png" alt="Jogador x ganhou" width="400 px"/>
+
+## Estrutura de Componentes
+- **Game**: Componente principal que contém o tabuleiro e controla o estado do jogo.
+- **Board**: Componente que renderiza o tabuleiro 3x3 e gerencia a interação dos jogadores com as células.
+- **Square**: Componente que representa cada célula do tabuleiro.
 
 ## Processo de desenvolvimento
 

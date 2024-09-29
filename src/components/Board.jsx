@@ -9,7 +9,7 @@ export default function () {
     const winner = calculateWinner(squares);
 
     let status;
-    if (!winner) {
+    if (winner) {
         status = "Ganhador: " + winner;
     } else {
         status = "Próximo jogador: " + (xIsNext ? "X" : "O");
@@ -17,7 +17,7 @@ export default function () {
 
     function handleClick(i) {
 
-        if (squares[i]) {
+        if (squares[i] || calculateWinner(squares)) {
             return;
         }
 
