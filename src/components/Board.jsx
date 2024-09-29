@@ -31,6 +31,11 @@ export default function () {
         setXIsNext(!xIsNext);
     }
 
+    function restart() {
+        setSquares(Array(9).fill(''))
+        setXIsNext(true)
+    }
+
     function calculateWinner(squares) {
 
         const lines = [
@@ -57,6 +62,11 @@ export default function () {
     return (
         <>
             <div className="status">{status}</div>
+            <div>
+                <button onClick={restart}>
+                    Reiniciar
+                </button>
+            </div>
             <div className="board">
                 <div className="board-row">
                     <Square value={squares[0]} onSquareClick={() => handleClick(0)}/>
