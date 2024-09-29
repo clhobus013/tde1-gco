@@ -1,5 +1,5 @@
-export default function Square() {
-    return <button className="square">
-        <p className="text">X</p>
+export default function Square({value, onSquareClick}) {
+    return <button className="square" onClick={onSquareClick}>
+            <p className="text">{value}</p>
         </button>
 }
